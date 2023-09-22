@@ -6,8 +6,9 @@
 }
 
 .sidebar{
+    margin-top: 8%;
     position: fixed;
-    left: -255px;
+    left: -100vh;
     width: 15%;
     height: 100%;
     transition: all .5s ease;
@@ -23,7 +24,7 @@
     color: var(--primary-color);
     padding-left: 40px;
     box-sizing: border-box;
-    transition: .4s;
+    transition: .5s ease;
 }
 
 .sidebar ul li:hover a{
@@ -46,16 +47,16 @@ label #btn,label #cancel{
 
 label #btn{
     left: 40px;
-    top: 25px;
+    top: 20%;
     color: var(--primary-color);
     padding: 6px 12px;
-    transition: all .5s;
+    transition: all .5s ease;
 }
 
 label #cancel{
     z-index: 1111;
     left: -195px;
-    top: 17px;
+    top: 20%;
     color: var(--primary-color);
     padding: 4px 9px;
     transition: all .5s ease;

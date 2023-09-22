@@ -12,15 +12,11 @@ const App = () => {
 		<BrowserRouter>
 			{/* Header or Top Navabr */}
 			<Header />
-			<div className="app-container">
-				{/* Sidebar */}
-				<Sidebar />
+			{/* Sidebar */}
+			<Sidebar />
 
-				{/* Main content */}
-				<div className="content-container">
-					<AppRoutes /> {/* Render route configuration component*/}
-				</div>
-			</div>
+			{/* Main content */}
+			<AppRoutes /> {/* Render route configuration component*/}
 		</BrowserRouter>
 	);
 };
