@@ -6,6 +6,10 @@
     color: var(--white-color);
 }
 
+.text-red{
+    color: var(--red-color);
+}
+
 .bg-yellow {
     background-color: var(--primary-color);
 }
