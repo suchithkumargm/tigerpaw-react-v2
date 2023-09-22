@@ -17,3 +17,7 @@
 .bg-gray {
     background-color: var(--secondary-color);
 }
+
+.font-bold{
+    font-weight: 600;
+}
