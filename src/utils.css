@@ -1,19 +1,19 @@
-.text-yellow{
+.text-yellow {
     color: var(--primary-color);
 }
 
-.text-white{
+.text-white {
     color: var(--white-color);
 }
 
-.bg-yellow{
+.bg-yellow {
     background-color: var(--primary-color);
 }
 
-.bg-black{
+.bg-black {
     background-color: var(--black-color);
 }
 
-.bg-gray{
+.bg-gray {
     background-color: var(--secondary-color);
 }

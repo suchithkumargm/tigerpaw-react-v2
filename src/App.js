@@ -11,7 +11,7 @@ const App = () => {
 	return (
 		<BrowserRouter>
 			{/* Header or Top Navabr */}
-			{/* <Header /> */}
+			<Header />
 			<div className="app-container">
 				{/* Sidebar */}
 				<Sidebar />
