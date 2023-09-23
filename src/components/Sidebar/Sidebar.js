@@ -24,11 +24,9 @@ const Sidebar = () => {
 					<li><Link className='text-red'to='#'><i>{icons['Logout']}</i>Logout</Link></li>
 				</ul>
 			</div>
-			<section>
-				suchith
-			</section>
+
 		</>
 	)
 }
 
-export default Sidebar
+export default Sidebar;
