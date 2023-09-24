@@ -1,5 +1,5 @@
-import React,{useState} from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 import icons from '../../assets/icons/icons.js';
 import './sidebar.css';
@@ -7,9 +7,10 @@ import './sidebar.css';
 const Sidebar = () => {
 
 	const [activeItem, setActiveItem] = useState('');	//state to manage active element dynamically
-
+const navigate=useNavigate();
 	//function to set the active item when clicked
 	const handleItemClick = (itemName) => {
+		navigate(itemName);
 		setActiveItem(itemName);
 	};
 
@@ -22,21 +23,37 @@ const Sidebar = () => {
 			</label>
 			<div className='sidebar bg-gray'>
 				<ul>
-					<li className={`${activeItem === 'Dashboard' ? 'active' : ''}`}><Link to='/dashboard' onClick={() => handleItemClick('Dashboard')}><i>{icons['Dashboard']}</i>Dashboard</Link></li>
+					<li className={`${activeItem === 'Dashboard' ? 'active' : ''}`}><Link to='/dashboard' className='activable-a' onClick={() => handleItemClick('Dashboard')}><i>{icons['Dashboard']}</i>Dashboard</Link></li>
 
-					<li className={`${activeItem === 'Attendance' ? 'active' : ''}`}><Link to='/attendance' onClick={() => handleItemClick('Attendance')}><i>{icons['Attendance']}</i>Attendance</Link></li>
+					<li className={`${activeItem === 'Attendance' ? 'active' : ''}`}><Link to='/attendance' className='activable-a' onClick={() => handleItemClick('Attendance')}><i>{icons['Attendance']}</i>Attendance</Link></li>
 
-					<li className={`${activeItem === 'TimeSheet' ? 'active' : ''}`}><Link to='/timesheet' onClick={() => handleItemClick('TimeSheet')}><i>{icons['TimeSheet']}</i>TimeSheet</Link></li>
+					<li className={`${activeItem === 'TimeSheet' ? 'active' : ''}`}><Link to='/timesheet' className='activable-a' onClick={() => handleItemClick('TimeSheet')}><i>{icons['TimeSheet']}</i>TimeSheet</Link></li>
 
-					<li className={`${activeItem === 'ProjectTask' ? 'active' : ''}`}><Link to='/projecttask' onClick={() => handleItemClick('ProjectTask')}><i>{icons['ProjectTask']}</i>Project / Task</Link></li>
+					<input type="checkbox" className="dropdown-checkbox" id="checkboxProject" />
+					<li className={`${activeItem === 'ProjectTask' ? 'sidenav dropdown active' : 'sidenav dropdown'}`} onClick={() => handleItemClick('ProjectTask')}>
+						<label className="dropdown-btn activable-a" for="checkboxProject" ><i>{icons['ProjectTask']}</i>Project / Task<i>{icons['Dropdown']}</i>
+						</label>
+						<div className="dropdown-container">
+							<Link to="#">Project 1</Link>
+							<Link to="#">Project 2</Link>
+						</div>
+					</li>
 
-					<li className={`${activeItem === 'Approval' ? 'active' : ''}`}><Link to='/approval' onClick={() => handleItemClick('Approval')}><i>{icons['Approval']}</i>Approval</Link></li>
+					<input type="checkbox" className="dropdown-checkbox" id="checkboxApproval" />
+					<li className={`${activeItem === 'Approval' ? 'sidenav dropdown active' : 'sidenav dropdown'}`} onClick={() => handleItemClick('Approval')}>
+						<label className="dropdown-btn activable-a" for="checkboxApproval" ><i>{icons['Approval']}</i>Approval<i>{icons['Dropdown']}</i>
+						</label>
+						<div className="dropdown-container">
+							<Link to="#">Accept</Link>
+							<Link to="#">Reject</Link>
+						</div>
+					</li>
 
-					<li className={`${activeItem === 'Payroll' ? 'active' : ''}`}><Link to='/payroll' onClick={() => handleItemClick('Payroll')}><i>{icons['Payroll']}</i>Payroll</Link></li>
+					<li className={`${activeItem === 'Payroll' ? 'active' : ''}`}><Link to='/payroll' className='activable-a' onClick={() => handleItemClick('Payroll')}><i>{icons['Payroll']}</i>Payroll</Link></li>
 
-					<li className={`${activeItem === 'ProfileSettings' ? 'active' : ''}`}><Link to='profilesettings' onClick={() => handleItemClick('ProfileSettings')}><i>{icons['ProfileSettings']}</i>Profile Settings</Link></li>
+					<li className={`${activeItem === 'ProfileSettings' ? 'active' : ''}`}><Link to='profilesettings' className='activable-a' onClick={() => handleItemClick('ProfileSettings')}><i>{icons['ProfileSettings']}</i>Profile Settings</Link></li>
 
-					<li><Link className='text-red'to='/logout'><i>{icons['Logout']}</i>Logout</Link></li>
+					<li><Link className='text-red' to='/logout'><i>{icons['Logout']}</i>Logout</Link></li>
 				</ul>
 			</div>
 
