@@ -51,6 +51,7 @@ label #btn{
     top: 20vh;
     color: var(--primary-color);
     transition: all .5s ease;
+    z-index: 10;
 }
 
 label #cancel{
