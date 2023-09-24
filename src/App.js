@@ -4,7 +4,6 @@ import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header/Header.js';
 import Sidebar from './components/Sidebar/Sidebar.js';
 import AppRoutes from './components/AppRoutes.js'; //Routing
-import TimeSheet from './components/Sidebar/NavigationItems/TimeSheet/TimeSheet.js';
 
 import './styles/App.css';
 
@@ -17,7 +16,7 @@ const App = () => {
 			<Sidebar />
 
 			{/* Main content */}
-			<AppRoutes /> {/* Render route configuration component*/}
+			<AppRoutes />
 		</BrowserRouter>
 	);
 };

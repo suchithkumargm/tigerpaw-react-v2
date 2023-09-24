@@ -1,0 +1,11 @@
+select{
+    background-color: var(--secondary-color);
+    border: none;
+    font-size: 2.5vh;
+    color: var(--primary-color);
+}
+
+option{
+    border: none;
+    font-size: 2.5vh;
+}

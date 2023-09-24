@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
 
 import Dashboard from './Sidebar/NavigationItems/Dashboard/Dashboard.js';
 import Attendance from './Sidebar/NavigationItems/Attendance/Attendance.js';
@@ -13,13 +13,13 @@ const Home = () => {
     return (
         //Render the components based on the routes
         <Routes>
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/attendance" element={<Attendance />} />
-            <Route path="/timesheet" element={<TimeSheet />} />
-            <Route path="/projecttask" element={<ProjectTask />} />
-            <Route path="/approval" element={<Approval />} />
-            <Route path="/payroll" element={<Payroll />} />
-            <Route path="/profilesettings" element={<ProfileSettings />} />
+            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/attendance' element={<Attendance />} />
+            <Route path='/timesheet' element={<TimeSheet />} />
+            <Route path='/projecttask' element={<ProjectTask />} />
+            <Route path='/approval' element={<Approval />} />
+            <Route path='/payroll' element={<Payroll />} />
+            <Route path='/profilesettings' element={<ProfileSettings />} />
         </Routes>
     )
 }

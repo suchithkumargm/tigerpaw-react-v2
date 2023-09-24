@@ -19,16 +19,20 @@ const TimeSheet = () => {
 	const handleAddRow = () => {
 		// Clear the form fields after adding a row
 		const { projectNo, startTime, endTime, activity, remarks } = formData;
-		setData([...data, { projectNo, startTime, endTime, activity, remarks }])
-		console.log(formData);
-		console.log(data);
-		setFormData({
-			projectNo: '',
-			startTime: '',
-			endTime: '',
-			activity: '',
-			remarks: ''
-		});
+		const anyFieldIsEmpty = !projectNo || !startTime || !endTime || !activity || !remarks;
+
+		if (anyFieldIsEmpty) {
+			alert('Details cannot be empty');
+		} else {
+			setData([...data, { projectNo, startTime, endTime, activity, remarks }])
+			setFormData({
+				projectNo: '',
+				startTime: '',
+				endTime: '',
+				activity: '',
+				remarks: ''
+			});
+		}
 	};
 
 	return (
