@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './TimeSheet.css';
 
 const TimeSheet = () => {
-	// Step 1: Initialize state variables
+
+	const [data, setData] = useState([]);
 	const [formData, setFormData] = useState({
 		projectNo: '',
 		startTime: '',
@@ -10,11 +11,17 @@ const TimeSheet = () => {
 		activity: '',
 		remarks: ''
 	});
-	const [data, setData] = useState([]);
-	// Step 2: Create a function to handle form submission
+
+	const handleChange = (e) => {
+		setFormData({ ...formData, [e.target.name]: e.target.value })
+	}
+
 	const handleAddRow = () => {
-		setData(...data, formData);
 		// Clear the form fields after adding a row
+		const { projectNo, startTime, endTime, activity, remarks } = formData;
+		setData([...data, { projectNo, startTime, endTime, activity, remarks }])
+		console.log(formData);
+		console.log(data);
 		setFormData({
 			projectNo: '',
 			startTime: '',
@@ -43,35 +50,35 @@ const TimeSheet = () => {
 								id='projectNo'
 								name='projectNo'
 								value={formData.projectNo}
-								onChange={(e) => setFormData({ ...formData, projectNo: e.target.value })}
+								onChange={handleChange}
 							/>
 							<input
 								type='text'
 								id='startTime'
 								name='startTime'
 								value={formData.startTime}
-								onChange={(e) => setFormData({ ...formData, startTime: e.target.value })}
+								onChange={handleChange}
 							/>
 							<input
 								type='text'
 								id='endTime'
 								name='endTime'
 								value={formData.endTime}
-								onChange={(e) => setFormData({ ...formData, endTime: e.target.value })}
+								onChange={handleChange}
 							/>
 							<input
 								type='text'
 								id='activity'
 								name='activity'
 								value={formData.activity}
-								onChange={(e) => setFormData({ ...formData, activity: e.target.value })}
+								onChange={handleChange}
 							/>
 							<input
 								type='text'
 								id='remarks'
 								name='remarks'
 								value={formData.remarks}
-								onChange={(e) => setFormData({ ...formData, remarks: e.target.value })}
+								onChange={handleChange}
 							/>
 						</form>
 
@@ -82,7 +89,39 @@ const TimeSheet = () => {
 							</button>
 							<button type='submit'>Submit</button>
 						</div>
+
 					</div>
+
+					{data.length === 0 ? '' :
+						<div class="outer-wrapper">
+							<div class="table-wrapper">
+								<table border={5} cellPadding={10} width="50%">
+									<thead className='text-yellow'>
+										<th>Project No</th>
+										<th>Start Time</th>
+										<th>End Time</th>
+										<th>Activity</th>
+										<th>Remarks</th>
+									</thead>
+									<tbody>
+										{
+											data.map((item, index) => {
+												return (
+													<tr className='text-white'>
+														<td>{item.projectNo}</td>
+														<td>{item.startTime}</td>
+														<td>{item.endTime}</td>
+														<td>{item.activity}</td>
+														<td>{item.remarks}</td>
+													</tr>
+												)
+											})
+										}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					}
 				</div>
 			</div>
 		</section>
