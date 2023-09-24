@@ -17,7 +17,6 @@ const App = () => {
 			<Sidebar />
 
 			{/* Main content */}
-			<TimeSheet />
 			<AppRoutes /> {/* Render route configuration component*/}
 		</BrowserRouter>
 	);

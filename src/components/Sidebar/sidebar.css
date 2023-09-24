@@ -80,3 +80,8 @@ label #cancel{
 #check:checked ~ label #cancel{
     left: 200px;
 }
+
+.active a{
+    border: 1px solid white;
+    border-radius: 5px;
+}
