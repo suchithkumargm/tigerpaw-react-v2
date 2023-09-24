@@ -33,6 +33,10 @@
     margin-right: 2rem;
 }
 
+span{
+    font-size: 3vh;
+}
+
 form{
     width: 65vw;
     height: 7vh;
@@ -43,10 +47,11 @@ form{
 }
 
 form input{
+    margin-top: 3vh;
     outline: none;
-    padding: 3px;
-    height: 30px;
-    width: 12%;
+    padding: 0.5vh;
+    height: 5vh;
+    width: 13%;
     border-radius: 5px;
     border: none;
     font-size: 1rem;
@@ -54,7 +59,7 @@ form input{
 
 .buttons{
     position: relative;
-    top: 250px;
+    top: 45vh;
     display: flex;
     justify-content:center;
 }
@@ -64,8 +69,9 @@ button{
     color: var(--black-color);
     border: none;
     border-radius: 5px;
-    padding: 10px;
+    padding: 2vh;
     margin: 0 20px;
+    font-size: 2.5vh;
 }
 
 button:hover{
@@ -75,60 +81,39 @@ button:hover{
 .outer-wrapper {
     margin:0 auto;
     max-width: fit-content;
-    max-height: fit-content;
-
-    
+    max-height: fit-content;    
 }
-.table-wrapper {
 
+.table-wrapper {
     overflow-y: scroll;
     height: fit-content;
     max-height: 25vh;
-    
-    margin-top: 22px;
-    
-    margin: 15px;
-    padding-bottom: 20px;
-    
+    padding-bottom: 10vh;   
 }
 
-
-table {
-    
+table {   
     min-width: max-content;
-    
     border-collapse: separate;
-    border-spacing: 0px;    
-    
+    border-spacing: 0px;        
 }
-
-
 
 table th{
     position: sticky; 
     top: 0px;
-    
     background-color: var(--secondary-color);
     text-align: center;
     font-weight: normal;
-    font-size: 18px;
-
+    font-size: 4vh;
 } 
 
-
-
 table th, table td {
-    
     padding: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
-    
 }
 
 table td {
     text-align: left;
-    
-    font-size: 15px;
-    padding-left: 20px;
-    
+    font-size: 3vh;
+    padding-left: 10vh;    
 }
