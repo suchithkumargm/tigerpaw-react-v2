@@ -3,10 +3,11 @@
     top: 18vh;
     left: 8vw;
     height: 82vh;
-    width: 90vw;
+    width: 80vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .inner-container{

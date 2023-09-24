@@ -5,6 +5,7 @@
     width: 15vw;
     height: 100%;
     transition: all .5s ease;
+    z-index: 9;
 }
 
 .sidebar ul a,
@@ -49,7 +50,6 @@ label #btn{
     left: 8vh;
     top: 20vh;
     color: var(--primary-color);
-    padding: 1.5vh 3vh;
     transition: all .5s ease;
 }
 
@@ -108,4 +108,50 @@ label #cancel{
 
 label i{
     margin-right: 1vh;
+}
+
+
+@media screen and (width<400px) {
+    .sidebar{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        left: -150vh;
+    }
+    .sidebar ul{
+        list-style: none;
+    }
+    label #btn{
+        left:3vh;
+        top: 20vh;
+    }
+    #check:checked ~ label #cancel{
+        top: 15vh;
+        left: 80vw;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 700px) {
+    .sidebar{
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+        left: -150vh;
+    }
+    .sidebar ul{
+        list-style: none;
+    }
+    label #btn{
+         left:3vh; 
+         top: 20vh; 
+    }
+    #check:checked ~ label #cancel{
+        top: 18vh;
+        left: 50vw;
+        z-index: 10;
+    }
+    #check:checked + .sidebar {
+        display: block;
+        z-index: 9; /* Set a higher z-index to bring it to the top */
+      }
 }
