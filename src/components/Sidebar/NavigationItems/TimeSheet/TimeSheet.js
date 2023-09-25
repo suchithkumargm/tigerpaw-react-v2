@@ -97,8 +97,8 @@ const TimeSheet = () => {
 					</div>
 
 					{data.length === 0 ? '' :
-						<div class="outer-wrapper">
-							<div class="table-wrapper">
+						<div className="outer-wrapper">
+							<div className="table-wrapper">
 								<table border={5} cellPadding={10} width="50%">
 									<thead className='text-yellow'>
 										<th>Project No</th>

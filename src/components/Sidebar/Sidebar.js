@@ -17,7 +17,7 @@ const Sidebar = () => {
 	return (
 		<>
 			<input type='checkbox' id='check' />
-			<label for='check'>
+			<label htmlFor='check'>
 				<i id='btn'>{icons['Hamburger']}</i>
 				<i id='cancel'>{icons['Cancel']}</i>
 			</label>
@@ -31,7 +31,7 @@ const Sidebar = () => {
 
 					<input type='checkbox' className='dropdown-checkbox' id='checkboxProject' />
 					<li className={`${activeItem === 'ProjectTask' ? 'sidenav dropdown active' : 'sidenav dropdown'}`} onClick={() => handleItemClick('ProjectTask')}>
-						<label className='dropdown-btn activable-a' for='checkboxProject' ><i>{icons['ProjectTask']}</i>Project / Task<i>{icons['Dropdown']}</i>
+						<label className='dropdown-btn activable-a' htmlFor='checkboxProject' ><i>{icons['ProjectTask']}</i>Project / Task<i>{icons['Dropdown']}</i>
 						</label>
 						<div className='dropdown-container'>
 							<Link to='/projecttask'>Project 1</Link>
@@ -41,7 +41,7 @@ const Sidebar = () => {
 
 					{/* <input type='checkbox' className='dropdown-checkbox' id='checkboxApproval' />
 					<li className={`${activeItem === 'Approval' ? 'sidenav dropdown active' : 'sidenav dropdown'}`} onClick={() => handleItemClick('Approval')}>
-						<label className='dropdown-btn activable-a' for='checkboxApproval' ><i>{icons['Approval']}</i>Approval<i>{icons['Dropdown']}</i>
+						<label className='dropdown-btn activable-a' htmlFor='checkboxApproval' ><i>{icons['Approval']}</i>Approval<i>{icons['Dropdown']}</i>
 						</label>
 						<div className='dropdown-container'>
 							<Link to='/approval'>Accept</Link>
