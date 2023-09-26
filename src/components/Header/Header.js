@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 import logo from '../../assets/images/logo.png';
 import photo from '../../assets/images/photo.jpeg';
+import notification_img from '../../assets/images/notification.svg';
 import icons from '../../assets/icons/icons.js';
 import './Header.css';
 
@@ -48,23 +48,38 @@ const Header = () => {
 	const { day, time, formattedDate } = formatDateTime(currentDateTime);
 
 	return (
-		<header>
-			<div className='brand'>
-				<img className='logo' src={logo} alt='logo' />
-				<Link className='text-yellow'>TIGERPAW</Link>
-			</div>
-			<div className='content'>
-				<p><i className='text-yellow'>{icons['Notification']}</i></p>
-				<div className='text-yellow font-bold'>
-					<p>{formattedDate} </p>
-					<p>{day} {time}</p>
-				</div>
-				<div>
-					<img className='photo' src={photo} alt='photo' />
-				</div>
-				<p className='text-white'>Suchith Kumar</p>
-			</div>
-		</header>
+		<header className="header bg-secondary">
+
+        <div className="brand">
+
+            <div className="brand__logo">
+                <img src={logo} alt="logo" />
+            </div>
+            <div className="brand__name text-primary">
+                <p>TIGERPAW</p>
+            </div>
+        </div>
+
+        <div className="header__info text-primary">
+            <div className="notifications">
+                <div className="notification__icon">
+                    <img src={notification_img} alt="notification"/>
+                </div>
+                <p className="time__info">
+                    15-09-2023
+                </p>
+                <p className="time__info">
+                    Fri 11:30 am
+                </p>
+            </div>
+
+            <div className="profile text-white">
+                <img src={photo} alt="profile photo"/>
+                <p>suchith kumar</p>
+            </div>
+        </div>
+
+    </header>
 	)
 }
 

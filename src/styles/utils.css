@@ -1,42 +1,27 @@
-.text-yellow {
+.bg-primary{
+    background-color: var(--primary-color);
+}
+
+.bg-secondary{
+    background-color: var(--secondary-color);
+}
+
+.bg-black{
+    background-color: var(--black-color);
+}
+
+.text-primary{
     color: var(--primary-color);
 }
 
-.text-white {
+.text-white{
     color: var(--white-color);
+}
+
+.text-black{
+    color: var(--black-color);
 }
 
 .text-red{
     color: var(--red-color);
-}
-
-.bg-yellow {
-    background-color: var(--primary-color);
-}
-
-.bg-black {
-    background-color: var(--black-color);
-}
-
-.bg-gray {
-    background-color: var(--secondary-color);
-}
-
-.font-bold{
-    font-weight: 600;
-}
-
-::-webkit-scrollbar {
-    width: 10px; /* Set the width of the scrollbar */
-}
-
-/* Customize the scrollbar thumb (the draggable part) */
-::-webkit-scrollbar-thumb {
-    background: #474747; /* Change the color of the thumb */
-    border-radius: 6px; /* Add rounded corners to the thumb */
-}
-
-/* Customize the scrollbar track on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-color); /* Change the color on hover */
 }

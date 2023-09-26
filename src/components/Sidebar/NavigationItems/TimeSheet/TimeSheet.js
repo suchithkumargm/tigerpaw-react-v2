@@ -36,99 +36,33 @@ const TimeSheet = () => {
 	};
 
 	return (
-		<section>
-			<div className='container'>
-				<div className='inner-container'>
-					<div className='form'>
-						<div className='form-headings'>
-							<span>Project No</span>
-							<span>Start Time</span>
-							<span>End Time</span>
-							<span>Activity</span>
-							<span>Remarks</span>
-						</div>
-						<form>
-							{/* Step 1: Bind form inputs to state variables */}
-							<input
-								type='text'
-								id='projectNo'
-								name='projectNo'
-								value={formData.projectNo}
-								onChange={handleChange}
-							/>
-							<input
-								type='text'
-								id='startTime'
-								name='startTime'
-								value={formData.startTime}
-								onChange={handleChange}
-							/>
-							<input
-								type='text'
-								id='endTime'
-								name='endTime'
-								value={formData.endTime}
-								onChange={handleChange}
-							/>
-							<input
-								type='text'
-								id='activity'
-								name='activity'
-								value={formData.activity}
-								onChange={handleChange}
-							/>
-							<input
-								type='text'
-								id='remarks'
-								name='remarks'
-								value={formData.remarks}
-								onChange={handleChange}
-							/>
-						</form>
+		<div className="timesheet bg-secondary">
 
-						<div className='buttons'>
-							{/* Step 2: Trigger the handleAddRow function on button click */}
-							<button type='button' onClick={handleAddRow}>
-								Add Row
-							</button>
-							<button type='submit'>Submit</button>
-						</div>
-
-					</div>
-
-					{data.length === 0 ? '' :
-						<div className="outer-wrapper">
-							<div className="table-wrapper">
-								<table border={5} cellPadding={10} width="50%">
-									<thead className='text-yellow'>
-										<th>Project No</th>
-										<th>Start Time</th>
-										<th>End Time</th>
-										<th>Activity</th>
-										<th>Remarks</th>
-									</thead>
-									<tbody>
-										{
-											data.map((item, index) => {
-												return (
-													<tr className='text-white'>
-														<td>{item.projectNo}</td>
-														<td>{item.startTime}</td>
-														<td>{item.endTime}</td>
-														<td>{item.activity}</td>
-														<td>{item.remarks}</td>
-													</tr>
-												)
-											})
-										}
-									</tbody>
-								</table>
-							</div>
-						</div>
-					}
-				</div>
+			<div className="form__headings bg-black">
+				<ul className="form__items text-primary">
+					<li className="form__item">Project No</li>
+					<li className="form__item time__heading">Start Time</li>
+					<li className="form__item time__heading">End Time</li>
+					<li className="form__item">Activity</li>
+					<li className="form__item">Remarks</li>
+				</ul>
 			</div>
-		</section>
+			<div className="form">
+				<form>
+					<div className="form__inputs">
+						<input type="text" required />
+						<input className="time__input" type="text" required />
+						<input className="time__input" type="text" required />
+						<input type="text" required />
+						<input type="text" required />
+					</div>
+					<div className="buttons">
+						<input className="btn" type="submit" value="Add Row" />
+						<input className="btn" type="submit" value="Submit" />
+					</div>
+				</form>
+			</div>
+		</div>
 	);
 };
 

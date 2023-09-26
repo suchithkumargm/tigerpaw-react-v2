@@ -1,9 +1,8 @@
-:root {
-
-	--primary-color:#ffbb00;
-	--secondary-color: rgb(27,27,27);
-	--black-color: #030303;
-	--white-color: #ffffff;
+:root{
+  --primary-color:#ffbb00;
+  --black-color:black;
+  --white-color:white;
+  --secondary-color:rgb(27,27,27);
   --red-color:red;
 }
 
