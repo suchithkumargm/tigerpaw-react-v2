@@ -39,6 +39,12 @@ input {
     width: 8rem;
 }
 
+input[type="text"]:focus,
+input[type="text"]:active {
+  outline: none;
+}
+
+
 .time__input {
     width: 5rem;
 }

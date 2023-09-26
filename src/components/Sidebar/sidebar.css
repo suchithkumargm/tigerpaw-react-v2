@@ -39,3 +39,8 @@
     position: relative;
     top: 3px;
 }
+
+.active{
+    border: 1px solid var(--white-color);
+    border-radius: 5px;
+}

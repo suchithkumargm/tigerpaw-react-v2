@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import logo from '../../assets/images/logo.png';
 import photo from '../../assets/images/photo.jpeg';
 import notification_img from '../../assets/images/notification.svg';
-import icons from '../../assets/icons/icons.js';
 import './Header.css';
 
 //function to get the current date and time 
@@ -50,36 +49,36 @@ const Header = () => {
 	return (
 		<header className="header bg-secondary">
 
-        <div className="brand">
+			<div className="brand">
 
-            <div className="brand__logo">
-                <img src={logo} alt="logo" />
-            </div>
-            <div className="brand__name text-primary">
-                <p>TIGERPAW</p>
-            </div>
-        </div>
+				<div className="brand__logo">
+					<img src={logo} alt="logo" />
+				</div>
+				<div className="brand__name text-primary">
+					<p>TIGERPAW</p>
+				</div>
+			</div>
 
-        <div className="header__info text-primary">
-            <div className="notifications">
-                <div className="notification__icon">
-                    <img src={notification_img} alt="notification"/>
-                </div>
-                <p className="time__info">
-                    15-09-2023
-                </p>
-                <p className="time__info">
-                    Fri 11:30 am
-                </p>
-            </div>
+			<div className="header__info text-primary">
+				<div className="notifications">
+					<div className="notification__icon">
+						<img src={notification_img} alt="notification" />
+					</div>
+					<p className="time__info">
+						{formattedDate}
+					</p>
+					<p className="time__info">
+						{day} {time}
+					</p>
+				</div>
 
-            <div className="profile text-white">
-                <img src={photo} alt="profile photo"/>
-                <p>suchith kumar</p>
-            </div>
-        </div>
+				<div className="profile text-white">
+					<img src={photo} alt='photo'/>
+					<p>suchith kumar</p>
+				</div>
+			</div>
 
-    </header>
+		</header>
 	)
 }
 

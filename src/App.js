@@ -16,8 +16,8 @@ const App = () => {
 			{/* Sidebar */}
 			<main className="main">
 				<Sidebar />
-				<TimeSheet />
-				{/* <AppRoutes /> */}
+				{/* <TimeSheet /> */}
+				<AppRoutes />
 			</main>
 
 			{/* Main content */}
