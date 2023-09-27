@@ -6,7 +6,6 @@ import Sidebar from './components/Sidebar/Sidebar.js';
 import AppRoutes from './components/AppRoutes.js'; //Routing
 
 import './styles/App.css';
-import TimeSheet from './components/Sidebar/NavigationItems/TimeSheet/TimeSheet.js';
 
 const App = () => {
 	return (
