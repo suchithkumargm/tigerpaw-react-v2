@@ -13,6 +13,7 @@ const Home = () => {
     return (
         //Render the components based on the routes
         <Routes>
+            <Route path='/' element='null' />
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/attendance' element={<Attendance />} />
             <Route path='/timesheet' element={<TimeSheet />} />
