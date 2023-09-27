@@ -53,7 +53,7 @@ input[type="text"]:active {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 15rem;
+    top: 3rem;
 }
 
 .btn {
@@ -64,4 +64,10 @@ input[type="text"]:active {
 
 .btn:hover {
     cursor: pointer;
+}
+
+.form-container {
+    overflow-y: scroll;
+    height:40vh;
+    max-height: 40vh; 
 }
